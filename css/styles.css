@@ -1,0 +1,243 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blueTitle: rgb(37, 43, 66);
+    --grayText: rgb(115, 115, 115);
+}
+
+header {
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 20px;
+    }
+
+    ul {
+        text-align: center;
+    }
+
+    li {
+        display: inline-block;
+        border-bottom: 2px solid white;
+
+    }
+    
+    a {
+        color: rgb(90, 90, 90);
+        font-size: 16px;
+        text-decoration: none;
+        padding: 8px;
+        display: inline-block;
+    }
+
+    img {
+        width: 15px;
+        margin-right: 8px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-left: 20px; 
+      color: var(--blueTitle); 
+    }
+
+    .menu-links {
+        li:hover {
+            border-bottom: 2px solid rgb(90, 90, 90);
+        }
+    }
+
+    .menu-login {
+        a {
+            color: #26A7F0;
+            font-weight: bold;
+        }
+    }
+}
+
+.carrosel {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+
+    img {
+        width: 100%;
+        filter: brightness(0.7) opacity(1);
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+  
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: 40px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 40%;
+        width: 100%;
+        text-align: center;
+
+        h1 {
+            font-size: 40px;
+            font-weight: bolder;
+        }
+        p {
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        button {
+            background-color: #26A7F0;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 6px;
+            font-size: 20px;
+            color: white;
+        }
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+}
+
+
+.intro-produtos {
+    background-color: #FAFAFA;
+    border: 1px solid black;
+    padding: 60px 0px; 
+}
+
+.intro-produtos > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.intro-produtos > div > div{
+    margin: auto;
+    width: 30%;
+    height: 200px;
+    padding: 25px;
+    border: 1px solid black;
+    margin: 0px 20px;
+
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    position: relative;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+        color: var(--grayText);
+        padding: 0 0 18px 0;
+    }
+    h1 {
+        color: var(--blueTitle);
+        font-size: 28px;
+    }
+    h2 {
+        color: var(--blueTitle);
+        font-size: 14px;
+        padding: 18px 0 0 0;
+    }
+}
+
+.prod1 {
+    background-image: url(/images/sorvete.png);
+}
+.prod2 {
+    background-image: url(/images/maca.png);
+}
+.prod3 {
+    background-image: url(/images/carne.png);
+}
+
+/* --------------- */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    margin: auto;
+    flex-wrap: wrap; /* Permite quebrar de linha */
+    justify-content: center; /* Alinha as caixas organizadoras no centro (horizontalmente)*/
+}
+
+.introducao > div > div {
+    border: 2px solid black;
+    width: 100%;
+    padding: 20px;
+}
+
+.introducao > div > div, .produtos > div > div {
+    border: 2px solid black;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Celular */
+@media screen and (max-width: 768px) {
+
+}
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .introducao > div > div, .produtos > div > div {
+        width: 50%;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+}
