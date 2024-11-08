@@ -13,6 +13,15 @@
     --ligthgrayText: rgb(184, 184, 184);
 }
 
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    margin: auto;
+    flex-wrap: wrap; /* Permite quebrar de linha */
+    justify-content: center; /* Alinha as caixas organizadoras no centro (horizontalmente)*/
+}
+
 nav{
     display: flex;
     align-items: center;
@@ -30,7 +39,7 @@ li {
 
 .menu-links a, .menu-login a {
     color: rgb(90, 90, 90);
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
     padding: 18px 10px;
     display: inline-block;
@@ -38,7 +47,7 @@ li {
 }
 
 .menu-login img {
-    width: 15px;
+    width: 16px;
     margin-right: 8px;
 }
 
@@ -56,48 +65,42 @@ li {
     font-weight: bold;
 }
 
+.menu-login a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 .a-active {
     color: #26A7F0 !important;
     font-weight: 500 !important;
 }
 
 .carrosel {
-    max-width: 1000px;
+    width: 100%;
     position: relative;
     margin: auto;
 
     img {
         width: 100%;
-        filter: brightness(0.7) opacity(1);
+        height: 700px;
+        object-fit: cover;
+        filter: brightness(0.6) opacity(1);
     }
 
-    .prev, .next {
+    .seta {
         cursor: pointer;
+        width: 50px;
+        height: 50px;
         position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: -22px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
+        bottom: 40%;
+        z-index: 5;
     }
-  
-    /* Position the "next button" to the right */
-    .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
+
+    .seta-direita {
+        left: 97%;
+
     }
-    
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
-    }
-    
-    /* Caption text */
+
     .text {
         color: #f2f2f2;
         font-size: 40px;
@@ -127,44 +130,16 @@ li {
         }
     }
     
-    /* The dots/bullets/indicators */
-    .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-    }
-    
-    .active, .dot:hover {
-        background-color: #717171;
-    }
-    
-    /* Fading animation */
-    .fade {
-        animation-name: fade;
-        animation-duration: 1.5s;
-    }
-
 }
 
 
 /* INTRO PRODUTOS */
-
 .intro-produtos {
     background-color: #FAFAFA;
     padding: 60px 0px; 
 }
 
-.intro-produtos > div {
-    display: flex;
-    flex-direction: row;
-}
-
-.intro-produtos > div > div{
+.intro-produtos .container > div{
     margin: auto;
     width: 30%;
     height: 200px;
@@ -219,6 +194,11 @@ li {
         background-size: cover;
     }
 
+    .f2 {
+        background-image: url(/images/card-dunuts.png);
+        background-position-x: center; 
+    }
+
     .furniture h1 {
         position: absolute;
         padding: 30px 50px;
@@ -241,7 +221,7 @@ li {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 0 10px;
+        padding: 0 40px 10px 20px;
         margin: 20px;
     }
 
@@ -251,11 +231,15 @@ li {
 
 
     .best-prod-nav h1 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .best-prod-nav li {
         padding: 0 18px;
+    }
+    
+    .best-prod-nav li a{
+        font-size: 16px;
     }
 
     .best-prod-nav .btn-prod {
@@ -268,7 +252,7 @@ li {
     }
 
     .prod-list img {
-        width: 180px;
+        width: 160px;
     }
     
     .prod-list h2 {
@@ -284,23 +268,243 @@ li {
         color: var(--ligthgrayText);
     }
 
-    .prod-list .preco {
-        color: rgb(35, 133, 109);
-    }
 }
 
+.preco {
+    color: rgb(35, 133, 109);
+}
+
+/* POPULAR */
+.popular{
+    margin-top: 100px;
+
+    .pop-image {
+        width: 60%;
+        background-image: url("/images/entregador.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+    }
+
+    .i2 {
+        background-image: url("/images/mulher.png");
+    }
+
+    .pop-produto {
+        width: 40%;
+        background-color: #FAFAFA;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding: 70px;
+    }
+
+    .pop-produto .txt-info{
+        font-size: 15px;
+        padding: 20px;
+        color: rgb(126, 126, 126);
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .pop-produto img {
+        width: 380px;
+        margin: 40px;
+    }
+
+    .pop-produto h2 {
+        font-size: 15px;
+        padding: 15px;
+        color: var(--blueTitle);
+    }
+
+    .pop-produto p {
+        font-size: 15px;
+        font-weight: 700;
+        padding: 8px;
+        color: var(--ligthgrayText);
+    }
+
+    .div-sales {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        img {
+            width: 18px;
+            margin: 0;
+        }
+        p {
+            color: var(--grayText);
+        }
+    }
+
+}
+
+/* TIPS */
+
+.tips {
+
+    .tip {
+        margin: 50px 0px;
+        margin-bottom: 70px;
+        width: 25%;
+        display: flex;
+    }
+
+    .tip > div {
+        padding: 10px;
+    }
+
+    .tip h1 {
+        font-size: 40px;
+        color: rgb(230, 64, 64);
+    }
+
+    .tip h2 {
+        font-size: 18px;
+        color: var(--blueTitle);
+    }
+
+    .tip p {
+        padding: 10px 0;
+        font-size: 17px;
+        color: var(--grayText);
+        font-weight: 500;
+    }
+
+}
+
+.mais-prod {
+    background-color: #FAFAFA;
+    margin-top: 50px;
+
+    .best-prod {
+        width: 100%;
+    }
+
+    .best-prod > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px;
+    }
+
+    .best-prod > div > div{
+        text-align: left;
+    }
+
+    .best-prod .best-prod-nav {
+        border-bottom: 2px solid rgb(219, 219, 219);
+        padding: 30px 0;
+    }
+
+
+    .prod-list {
+        text-align: center;
+        margin: 0 35px;
+    }
+
+    .prod-list img {
+        width: 280px;
+        padding: 20px 0;
+    }
+    
+    .prod-list h2 {
+        font-size: 15px;
+        padding: 20px 0;
+        color: var(--grayText);
+    }
+
+    .prod-list p {
+        font-size: 15px;
+        font-weight: 700;
+        padding: 8px;
+        color: var(--ligthgrayText);
+    }
+
+    .logos {
+        display: flex;
+        justify-content: space-between;
+        padding: 60px 0;
+    }
+
+}
+
+footer {
+    background-color: rgb(37, 43, 66);
+    color: white;
+}
+
+.footer-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.footer-header p {
+    padding: 10px 0;
+}
+
+.footer-header button {
+    background-color: #26A7F0;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    color: white;
+}
+
+.footer-section {
+    padding: 50px 0px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.footer-section ul {
+    list-style: none;
+    text-align: left;
+    padding: 10px 0;
+}
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-section ul li {
+    width: 120%;
+    padding: 8px 0;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+    color: var(--ligthgrayText);
+}
+
+.footer-section img {
+    padding: 0px 10px 0px 0px;
+    width: 30px;
+}
+
+.copywright {
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copywright img {
+    padding: 0 10px;
+}
 
 
 /* --------------- */
 
-.container {
-    display: flex;
-    flex-direction: row;
-    width: 1200px;
-    margin: auto;
-    flex-wrap: wrap; /* Permite quebrar de linha */
-    justify-content: center; /* Alinha as caixas organizadoras no centro (horizontalmente)*/
-}
+
 
 .introducao > div > div {
     border: 2px solid black;
