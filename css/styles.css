@@ -51,13 +51,26 @@ li {
     margin-right: 8px;
 }
 
+.title {
+    font-size: 22px;
+    color: var(--blueTitle);
+    text-decoration: none;
+    transition: 0.5s;
+}
+.title:hover {
+    color: rgb(35, 166, 240);
+    transition: color 0.3s ease-in-out;
+}
+
+
 .menu-links h1 {
     font-size: 24px;
-    color: var(--blueTitle); 
+    color: var(--blueTitle);
 }
 
 .menu-links li a:hover {
     color: rgb(35, 166, 240);
+    transition: 0.3s;
 }
 
 .menu-login a {
@@ -66,8 +79,9 @@ li {
 }
 
 .menu-login a:hover {
-    text-decoration: underline;
     font-weight: bold;
+    transition: 0.3s;
+    filter: brightness(0.5);
 }
 
 .a-active {
@@ -123,10 +137,19 @@ li {
         button {
             background-color: #26A7F0;
             padding: 12px 18px;
-            border: none;
+            border: 1px solid #26A7F0;
             border-radius: 6px;
             font-size: 20px;
             color: white;
+            transition: 0.4s;
+        }
+
+        button:hover {
+            background-color: #f0f9ff;
+            padding: 12px 18px #26A7F0;
+            color: #14567c;
+            font-size: 21px;
+            transition: 0.4s;
         }
     }
     
@@ -145,6 +168,7 @@ li {
     height: 200px;
     padding: 25px;
     margin: 0px 20px;
+    transition: 0.3s;
 
     background-position: 100%;
     background-repeat: no-repeat;
@@ -170,14 +194,20 @@ li {
     }
 }
 
+.intro-produtos .container > div:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
 .prod1 {
-    background-image: url(/images/sorvete.png);
+    background-image: url(../images/sorvete.png);
 }
 .prod2 {
-    background-image: url(/images/maca.png);
+    background-image: url(../images/maca.png);
 }
 .prod3 {
-    background-image: url(/images/carne.png);
+    background-image: url(../images/carne.png);
 }
 
 /* PRODUTOS */
@@ -186,16 +216,13 @@ li {
         padding: 0;
         width: 33%;
         position: static;
-    }
-
-    .furniture {
-        background-image: url(/images/card-cover.png);
+        background-image: url(../images/card-cover.png);
         background-repeat: no-repeat;
         background-size: cover;
     }
 
     .f2 {
-        background-image: url(/images/card-dunuts.png);
+        background-image: url(../images/card-dunuts.png);
         background-position-x: center; 
     }
 
@@ -251,6 +278,15 @@ li {
         margin: 0 35px;
     }
 
+    .prod-list > div {
+        transition: 0.3s;
+    }
+
+    .prod-list > div:hover{
+        transform: scale(1.05);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
     .prod-list img {
         width: 160px;
     }
@@ -280,14 +316,14 @@ li {
 
     .pop-image {
         width: 60%;
-        background-image: url("/images/entregador.png");
+        background-image: url("../images/entregador.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position-x: center;
     }
 
     .i2 {
-        background-image: url("/images/mulher.png");
+        background-image: url("../images/mulher.png");
     }
 
     .pop-produto {
@@ -452,10 +488,18 @@ footer {
 .footer-header button {
     background-color: #26A7F0;
     padding: 12px 18px;
-    border: none;
+    border: 1px solid #26A7F0;
     border-radius: 6px;
     font-size: 20px;
     color: white;
+    transition: 0.4s;
+}
+
+.footer-header button:hover {
+    background-color: #f0f9ff;
+    padding: 12px 18px #26A7F0;
+    color: #14567c;
+    transition: 0.4s;
 }
 
 .footer-section {
@@ -482,6 +526,7 @@ footer {
 .footer-section ul li a:hover {
     text-decoration: underline;
     color: var(--ligthgrayText);
+    transition: 0.3s;
 }
 
 .footer-section img {
@@ -501,29 +546,157 @@ footer {
     padding: 0 10px;
 }
 
-
-/* --------------- */
-
-
-
-.introducao > div > div {
-    border: 2px solid black;
-    width: 100%;
-    padding: 20px;
+.menu-toggle {
+    display: none;
 }
 
 
 /* Celular */
 @media screen and (max-width: 768px) {
-
-}
-/* Tablet */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    .introducao > div > div, .produtos > div > div {
-        width: 50%;
+    .container {
+        flex-direction: column;
+        width: 100%;
     }
 
-    .container {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+    }
+
+    .menu-mobile {
+        display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .menu-links{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .menu-links-mob{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-links a {
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .menu-login-mob {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+        width: 110px;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu-toggle img {
+        width: 24px;
+    }
+
+    .menu-links.active, .menu-login.active {
+        display: flex;
+    }
+
+
+    .carrosel img {
+        height: 600px;
+    }
+
+    .intro-produtos .container {
+        align-items: center;
+    }
+
+    .intro-produtos .container > div {
+        width: 350px;
+        margin: 10px 10px;
+    }
+
+    .produtos .furniture {
+        width: 100%;
+        background-position: 50%;
+        height: 664px; 
+        margin: 10px;
+    }
+
+    .produtos .prod-list > div {
+        img {
+            width: 400px;
+        }
+        width: 100%;
+    }
+
+    .produtos .best-prod {
+        width: 100%;
+    }
+
+    .popular .pop-image, .popular .pop-produto {
+        width: 100%;
+    }
+
+    .pop-image {
+        height: 664px; 
+    }
+
+    .tip {
+        margin: auto;
+    }
+
+    .tips .tip {
+        margin-left: 80px;
+        width: 70%;
+    }
+
+    .best-prod > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .best-prod-nav {
+        padding: 0px 0;
+        height: 100px;
+    }
+
+    .prod-list > div, .logos{
+        width: 80%;
+    }
+
+    .logos{
+        text-align: center;
+        width: 100%;
+        height: 1500px;
+        img {
+            width: 300px;
+            padding: 20px;
+        }
+    }
+
+    .mais-prod .prod-list img {
+        width: 100%;
+    }
+
+    .footer-section {
+        grid-template-columns: 1fr;
     }
 }

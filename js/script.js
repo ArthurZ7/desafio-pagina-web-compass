@@ -1,4 +1,10 @@
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+  document.querySelector('.menu-links').classList.toggle('active');
+  document.querySelector('.menu-login').classList.toggle('active');
+});
 
+
+// CARROSEL
 let imagemAtual = document.querySelectorAll(".img-carrosel");
 const setaDireita = document.querySelector(".seta-direita");
 const setaEsquerda = document.querySelector(".seta-esquerda");
