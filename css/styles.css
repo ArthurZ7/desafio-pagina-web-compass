@@ -467,6 +467,11 @@ li {
         padding: 60px 0;
     }
 
+    .logos img:hover {
+        transition: 0.3s;
+        filter: brightness(0.4);
+    }
+
 }
 
 footer {
@@ -487,10 +492,11 @@ footer {
 
 .footer-header button {
     background-color: #26A7F0;
-    padding: 12px 18px;
+    padding: 18px 24px;
     border: 1px solid #26A7F0;
     border-radius: 6px;
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: 500;
     color: white;
     transition: 0.4s;
 }
@@ -696,7 +702,43 @@ footer {
         width: 100%;
     }
 
+    .footer-header {
+        flex-direction: column;
+        padding: 40px 110px;
+
+    }
+
+    .footer-header p {
+        padding: 20px 0;
+    }
+
+    .footer-header button {
+        margin: 20px 0 0 0;
+    }
+
     .footer-section {
         grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .footer-section ul {
+        padding: 0px 80px;
+    }
+
+    .footer-section ul li {
+        padding: 10px 30px;
+    }
+
+    .footer-section h2{
+        padding: 40px 110px 20px 110px;
+    }
+
+    .copywright {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .copywright img {
+        padding: 10px 0;
     }
 }
