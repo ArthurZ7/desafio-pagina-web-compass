@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 :root {
     --blueTitle: rgb(37, 43, 66);
     --grayText: rgb(114, 114, 114);
@@ -427,10 +431,11 @@ li {
         justify-content: space-between;
         margin: 20px;
     }
-
+    
     .best-prod > div > div{
         text-align: left;
     }
+    
 
     .best-prod .best-prod-nav {
         border-bottom: 2px solid rgb(219, 219, 219);
@@ -441,6 +446,11 @@ li {
     .prod-list {
         text-align: center;
         margin: 0 35px;
+    }
+
+    .prod-list > div:hover{
+        transform: scale(1.05);
+        transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .prod-list img {
@@ -741,4 +751,6 @@ footer {
     .copywright img {
         padding: 10px 0;
     }
+
+    
 }
