@@ -154,6 +154,7 @@ li {
             color: #14567c;
             font-size: 21px;
             transition: 0.4s;
+            cursor: pointer;
         }
     }
     
@@ -484,6 +485,108 @@ li {
 
 }
 
+/* POSTS */
+
+.posts {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.posts h1 {
+    font-size: 30px;
+    color: var(--blueTitle);
+    padding: 10px 0 30px 0;
+}
+
+.posts h2 {
+    font-size: 10px;
+    color: #26A7F0;
+}
+
+.posts .post {
+    width: 30%;
+    background-color: #FAFAFA;
+    transition: 0.3s;
+}
+
+.post {
+    text-align: left;
+}
+
+.post-nav {
+    display: flex;
+    justify-content: left;
+
+    p {
+        font-size: 10px;
+        color: var(--grayText);
+        padding-right: 15px; 
+    };
+}
+
+.post-text {
+    width: 90%;
+    padding: 20px;
+}
+
+.post-text h1 {
+    font-size: 20px;
+    color: var(--blueTitle);
+    padding: 10px 0;
+    font-weight: 450;
+}
+
+.post-text h2 {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--grayText);
+}
+
+.post-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.post-info > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.post-info img {
+    width: 15px;
+}
+.post-info p {
+    font-size: 12px;
+    padding: 10px 5px;
+    color: var(--grayText);
+}
+
+.post-learn-more {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0 0;
+    align-items: end;
+
+    h3 {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--grayText);
+        padding: 20px 5px 0 0;
+    }
+
+    img {
+        width: 8px;
+    }
+}
+
+
+
+
 footer {
     background-color: rgb(37, 43, 66);
     color: white;
@@ -516,6 +619,7 @@ footer {
     padding: 12px 18px #26A7F0;
     color: #14567c;
     transition: 0.4s;
+    cursor: pointer;
 }
 
 .footer-section {
@@ -711,6 +815,23 @@ footer {
     .mais-prod .prod-list img {
         width: 100%;
     }
+
+
+    .posts {
+        width: 100%;
+        margin: auto;
+        
+    }
+
+    .posts .post {
+        width: 350px;
+        margin: auto;
+        justify-content: center;
+        margin-top: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+
 
     .footer-header {
         flex-direction: column;
