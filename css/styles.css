@@ -22,8 +22,8 @@ body {
     flex-direction: row;
     width: 1200px;
     margin: auto;
-    flex-wrap: wrap; /* Permite quebrar de linha */
-    justify-content: center; /* Alinha as caixas organizadoras no centro (horizontalmente)*/
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav{
@@ -47,7 +47,7 @@ li {
     text-decoration: none;
     padding: 18px 10px;
     display: inline-block;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .menu-login img {
@@ -79,7 +79,7 @@ li {
 
 .menu-login a {
     color: #26A7F0;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .menu-login a:hover {
@@ -116,43 +116,43 @@ li {
         }
 
         .seta-direita {
-        left: 95%;
+            right: 0;
         }
 
         .text {
-        color: #f2f2f2;
-        font-size: 40px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 40%;
-        width: 100%;
-        text-align: center;
+            color: #f2f2f2;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 40%;
+            width: 100%;
+            text-align: center;
 
         h1 {
-            font-size: 40px;
+            font-size: 60px;
             font-weight: bolder;
             color: white;
         }
         p {
-            padding: 20px;
+            padding: 25px;
             font-size: 20px;
+            font-weight: 500;
         }
 
         button {
             background-color: #26A7F0;
-            padding: 12px 18px;
+            padding: 16px 20px;
             border: 1px solid #26A7F0;
             border-radius: 6px;
-            font-size: 20px;
+            font-size: 18px;
             color: white;
             transition: 0.4s;
         }
 
         button:hover {
             background-color: #f0f9ff;
-            padding: 12px 18px #26A7F0;
+            padding: 16px 20px #26A7F0;
             color: #14567c;
-            font-size: 21px;
+            font-size: 20px;
             transition: 0.4s;
             cursor: pointer;
         }
@@ -489,7 +489,7 @@ li {
     .logos {
         display: flex;
         justify-content: space-between;
-        padding: 60px 0;
+        padding: 100px 0 20px 0;
     }
 
     .logos img:hover {
@@ -662,9 +662,8 @@ footer {
 }
 
 .footer-section ul li a:hover {
-    text-decoration: underline;
     color: var(--ligthgrayText);
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .footer-section img {
@@ -699,12 +698,6 @@ footer {
     nav {
         flex-direction: column;
         align-items: flex-start;
-    }
-
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        font-size: 30px;
     }
 
     .menu-mobile {
@@ -744,9 +737,16 @@ footer {
     .menu-toggle {
         display: flex;
         width: 110px;
+        font-size: 30px;
         text-align: center;
         align-items: center;
         justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .menu-toggle > :hover {
+        transition: 0.3s;
+        filter: brightness(5);
     }
 
     .menu-toggle img {
@@ -760,6 +760,7 @@ footer {
 
     .carrosel img {
         height: 600px;
+
     }
 
     .intro-produtos .container {
