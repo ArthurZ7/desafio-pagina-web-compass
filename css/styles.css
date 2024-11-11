@@ -254,7 +254,7 @@ li {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 40px 10px 20px;
+        padding: 0 20px 10px 20px;
         margin: 20px;
     }
 
@@ -460,6 +460,7 @@ li {
     .prod-list {
         text-align: center;
         margin: 0 35px;
+        padding: 0;
     }
 
     .prod-list > div:hover{
@@ -779,11 +780,16 @@ footer {
         margin: 10px;
     }
 
+    .produtos .prod-list {
+        padding: 0px;
+    }
+
     .produtos .prod-list > div {
+        width: 100%;
+
         img {
             width: 400px;
         }
-        width: 100%;
     }
 
     .produtos .best-prod {
